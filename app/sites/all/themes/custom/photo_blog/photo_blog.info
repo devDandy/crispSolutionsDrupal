@@ -1,0 +1,17 @@
+name = Photo Blog
+description = Photography blog
+core = 7.x
+
+scripts[] = vendor/flexslider/jquery.flexslider.js
+scripts[] = js/photo_blog.js
+
+
+stylesheets[all][] = css/main.css
+
+regions[header] = Header
+regions[above_content] = Above Content
+regions[content] = Content
+regions[right_column] = Right Column
+regions[left_column] = Left Column
+regions[slideshow] = Slideshow
+regions[footer] = Footer
