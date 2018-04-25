@@ -1,28 +1,20 @@
 <?php
   
-function photo_blog_preprocess_page(&$variables){
-  // NAMING IS EXTREMELY IMPORTANT FOR THEMING. 
-	//PREPROCESS PAGE IS A LIFECYCLE
-  $body_class = "full-width";
-  $column_class = "";
-  $page = $variables["page"];
-  
-  if(!empty($page["right_column"])){
-    $column_class = "one-fourth";
-    $body_class = "three-fourths";
-  }
 
-  if(!empty($page["left_column"])){
-    $column_class = "one-fourth";
-    $body_class = "three-fourths";
-  }
-
-  if(!empty($page["right_column"] && $page["left_column"])){
-    $column_class = "one-fourth";
-    $body_class = "half";
-  }
-  
-  $variables["photo_blog"]["body_class"] = $body_class;
-  $variables["photo_blog"]["column_class"] = $column_class;
-  
+function photo_blog_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'webform_client_form_40') {
+    $form['actions']['submit']['#attributes']['class'][] = 'contact-form-btn';
+    $form['#attributes']['class'][] = 'contact-form-container';
+  } 
 }
+
+function photo_blog_preprocess_html(&$vars) {
+$viewport = array(
+  '#tag' => 'meta', 
+  '#attributes' => array(
+    'name' => 'viewport', 
+    'content' => 'width=device-width, initial-scale=1, maximum-scale=1',
+  ),
+);
+}
+

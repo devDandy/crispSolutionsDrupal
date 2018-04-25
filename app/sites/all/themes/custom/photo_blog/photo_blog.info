@@ -1,17 +1,23 @@
 name = Photo Blog
-description = Photography blog
+description = Crisp Solutions
 core = 7.x
 
-scripts[] = vendor/flexslider/jquery.flexslider.js
-scripts[] = js/photo_blog.js
+scripts[] = vendor/colorbox-master/jquery.colorbox-min.js
 
 
 stylesheets[all][] = css/main.css
+stylesheets[all][] = vendor/modal/iziModal.min.css
+
 
 regions[header] = Header
-regions[above_content] = Above Content
 regions[content] = Content
-regions[right_column] = Right Column
-regions[left_column] = Left Column
-regions[slideshow] = Slideshow
+regions[about_region] = About Region
+regions[what_we_do_region] = What We Do Region
+regions[services_modal_region] = Services Modal Region
+regions[partners_and_vendors_region] = Partner and Preferred Vendors Region
+regions[contact_us_main_column_region] = Contact Us Main Region
+regions[contact_us_left_column_region] = Contact Us Left Column Region
+regions[contact_us_right_column_region] = Contact Us Right Column Region
 regions[footer] = Footer
+
+
